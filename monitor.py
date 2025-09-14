@@ -104,4 +104,10 @@ def main():
                 print("Alert sent for", name)
 
 if __name__ == "__main__":
+    from datetime import datetime
+    now = datetime.utcnow()
+    # Send heartbeat once per day at 00:00 UTC
+    if now.hour == 0 and now.minute < 10:
+        send_telegram("✅ XRPL Monitor is alive and checking every 10 minutes.")
     main()
+
