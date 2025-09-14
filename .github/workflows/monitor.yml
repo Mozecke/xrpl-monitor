@@ -2,8 +2,8 @@ name: XRPL Monitor
 
 on:
   schedule:
-    - cron: */10 * * * *   # runs every 10 minutes
-  workflow_dispatch:        # allows manual run
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
 
 jobs:
   run-monitor:
